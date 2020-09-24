@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to FlaskApp {% endblock %}</h1>
+    <div>
+        <span>    
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Hospitals and Medical Coleges</div>
+                <div class="card-body text-primary">
+                <!-- <h5 class="card-title">Search Hospitals</h5> -->
+                <a href="SearchHospitals"><button type="button" class="btn btn-primary">Search Hospitals</button></a>
+                </div>
+                <div class="card-body text-primary">
+                    <!-- <h5 class="card-title">Search Hospitals</h5> -->
+                    <a href="SearchMedicalColg"><button type="button" class="btn btn-primary">Search Medical colleges</button></a>
+                </div>    
+            </div>
+        </span>
+        <span>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">sample tests and confirmed cases</div>
+                <div class="card-body text-primary">
+                <!-- <h5 class="card-title">sample tests and confirmed cases</h5> -->
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <a href="TestsReport"><button type="button" class="btn btn-primary">Tests Report</button></a>
+                </div>
+            </div>
+        </span>
+        <span>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Contact & Helpline Information</div>
+                <div class="card-body text-primary">
+                <!-- <h5 class="card-title">Primary card title</h5> -->
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+                <a href="HelplineCentre"><button type="button" class="btn btn-primary">Helpline Centre</button></a>
+                </div>
+            </div>
+        </span>
+        <span>
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Notifications</div>
+                <div class="card-body text-primary">
+                <!-- <h5 class="card-title">Primary card title</h5> -->
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <a href="Notifications"><button type="button" class="btn btn-primary">Notifications</button></a>
+                </div>
+            </div>
+        </span>
+    </div>
+{% endblock %}

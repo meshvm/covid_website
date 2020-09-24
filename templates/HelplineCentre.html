@@ -1,0 +1,28 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Helpline Data</title>
+</head>
+<body> -->
+    {% extends 'base.html' %}
+
+    {% block content %}
+        <h1 color="blue">{% block title %} Welcome to Helpline Zone {% endblock %}</h1>    
+    <table class="table" align="center" border="1">
+        <tbody>
+            <th>State Name</th>
+            <th>Helpline Number</th>
+        {% for dict_item in a %}
+           <tr>
+                {% for key, value in dict_item.items() %}
+                    <!-- <h1>Key: {{key}}</h1> -->
+                    <td>{{value}}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+<!-- </body>
+</html> -->
+{% endblock %}

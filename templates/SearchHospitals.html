@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Helpline Data</title>
+</head>
+<body> -->
+    {% extends 'base.html' %}
+
+    {% block content %}
+        <h1>{% block title %} Welcome to Search Hospital! {% endblock %}</h1>    
+    <table class="table" align="center" border="1">
+        <tbody>
+            <th>State Name</th>
+            <th>Rural Hospitals</th>
+            <th>Rural Beds</th>
+            <th>Urban Hospitals</th>
+            <th>Beds Urban </th>
+            <th>Total Hospitals</th>
+            <th>Total Beds(State Wise)</th>
+        {% for dict_item in reg %}
+           <tr>
+                {% for key, value in dict_item.items() %}
+                    <!-- <h1>Key: {{key}}</h1> -->
+                    <td>{{value}}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        <tr>
+            <td>Total Summary(INDIA)</td>
+        {% for key, value in smry.items() %}
+            <td>{{value}}</td>
+        {% endfor %}
+        </tr>
+        </tbody>
+    </table>
+<!-- </body>
+</html> -->
+{% endblock %}
