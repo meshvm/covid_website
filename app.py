@@ -1,14 +1,19 @@
 import json
 import requests
 import re, datetime, string
+import pandas as pd
 
+# read census.csv into a DataFrame : census_df
+census_df = pd.read_csv("covid19india.csv")
 
-response = requests.get("https://api.rootnet.in/covid19-in/hospitals/medical-colleges")
-todos = json.loads(response.text)
-pr=todos['data']['medicalColleges']
-for i in pr:
-    for key,value in i.items():
-        print(value)
+# rename the columns of the census DataFrame
+print(census_df.columns)
+# response = requests.get("https://api.rootnet.in/covid19-in/hospitals/medical-colleges")
+# todos = json.loads(response.text)
+# pr=todos['data']['medicalColleges']
+# for i in pr:
+#     for key,value in i.items():
+#         print(value)
 # pr=todos['data']['medicalCollages']
 # n=6
 # for i in pr:

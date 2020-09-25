@@ -2,9 +2,13 @@ import os
 import requests
 import json
 from flask import Flask,render_template
+'''
+This function is known as the application factory. Any configuration, registration, and
+other setup the application needs will happen inside the function, then the application will be returned.
+'''
 
-
-def create_app(test_config=None):
+def create_app(test_config=None):  
+    #application factory function
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
